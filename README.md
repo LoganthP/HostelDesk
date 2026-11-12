@@ -20,11 +20,6 @@
 [![MongoDB Atlas](https://img.shields.io/badge/MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas)
 [![Mongoose](https://img.shields.io/badge/Mongoose_8-880000?style=for-the-badge&logo=mongoose&logoColor=white)](https://mongoosejs.com/)
 
-![Status](https://img.shields.io/badge/status-active-success?style=flat-square)
-![Roles](https://img.shields.io/badge/roles-3-blueviolet?style=flat-square)
-![API checks](https://img.shields.io/badge/API_smoke_tests-34-brightgreen?style=flat-square)
-![PRs Welcome](https://img.shields.io/badge/PRs-welcome-ff69b4?style=flat-square)
-
 [Features](#-features) · [Tech Stack](#-tech-stack) · [Architecture](#-architecture) · [Quick Start](#-quick-start) · [Demo Guide](#-suggested-demo) · [API](#-api-reference) · [Troubleshooting](#-troubleshooting)
 
 </div>
