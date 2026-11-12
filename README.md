@@ -241,16 +241,24 @@ cd server
 cp .env.example .env        # Windows (PowerShell): copy .env.example .env
 ```
 
-Edit `server/.env`:
+**Generate a random session secret.** Run this command and copy the 96-character output:
+
+```bash
+node -e "console.log(require('crypto').randomBytes(48).toString('hex'))"
+```
+
+Edit `server/.env` and paste the generated value as `SESSION_SECRET`:
 
 ```env
 MONGODB_URI=mongodb+srv://<user>:<password>@cluster0.xxxxx.mongodb.net/?retryWrites=true&w=majority
 DB_NAME=hostel_cms
-SESSION_SECRET=any-long-random-string
+SESSION_SECRET=<paste-the-generated-secret-here>
 PORT=5000
 NODE_ENV=development
 COOKIE_SECURE=false
 ```
+
+> 🔒 Never commit your `.env` file or share the secret. Use a different secret for every deployment.
 
 ### 5. Install, seed and run
 
@@ -462,30 +470,3 @@ hostel-complaint-management-system/
 | Want to start over | `npm run seed` resets all data. |
 
 <img src="assets/divider.svg" width="100%" alt=""/>
-
-## 🤝 Contributing
-
-Contributions, issues and feature requests are welcome.
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature`
-3. Commit your changes: `git commit -m "Add amazing feature"`
-4. Push the branch: `git push origin feature/amazing-feature`
-5. Open a Pull Request
-
-## 👨‍💻 Author
-
-**Loganth P**
-
-[![GitHub](https://img.shields.io/badge/GitHub-LoganthP-181717?style=for-the-badge&logo=github)](https://github.com/LoganthP)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Loganth_P-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/loganth-p-158667280/)
-
-<div align="center">
-
-<br/>
-
-⭐ **If HostelDesk helped you, consider giving it a star!** ⭐
-
-<sub>Built with React, Express and MongoDB Atlas</sub>
-
-</div>
