@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 220" width="1100" height="220" role="img" aria-label="Complaint lifecycle: Submitted, Assigned, In progress, Resolved, Closed">
+  <defs>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <style>
+    text { font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; text-anchor: middle; }
+    .label { font-size: 17px; font-weight: 700; fill: #ffffff; }
+    .who { font-size: 13px; fill: #64748b; }
+    .node { stroke: #ffffff; stroke-width: 3; }
+    .pulse { animation: pulse 2.5s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+  </style>
+
+  <!-- track -->
+  <line x1="110" y1="95" x2="990" y2="95" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round" stroke-dasharray="2 12"/>
+  <line x1="110" y1="95" x2="990" y2="95" stroke="url(#line)" stroke-width="6" stroke-linecap="round" stroke-dasharray="880" stroke-dashoffset="880">
+    <animate attributeName="stroke-dashoffset" values="880;0;0;880" keyTimes="0;0.6;0.9;1" dur="8s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- nodes -->
+  <g class="pulse"><circle class="node" cx="110" cy="95" r="38" fill="#6366f1" filter="url(#glow)"/></g>
+  <g class="pulse" style="animation-delay:.4s"><circle class="node" cx="330" cy="95" r="38" fill="#8b5cf6" filter="url(#glow)"/></g>
+  <g class="pulse" style="animation-delay:.8s"><circle class="node" cx="550" cy="95" r="38" fill="#0ea5e9" filter="url(#glow)"/></g>
+  <g class="pulse" style="animation-delay:1.2s"><circle class="node" cx="770" cy="95" r="38" fill="#14b8a6" filter="url(#glow)"/></g>
+  <g class="pulse" style="animation-delay:1.6s"><circle class="node" cx="990" cy="95" r="38" fill="#22c55e" filter="url(#glow)"/></g>
+
+  <text class="label" x="110" y="101">1</text>
+  <text class="label" x="330" y="101">2</text>
+  <text class="label" x="550" y="101">3</text>
+  <text class="label" x="770" y="101">4</text>
+  <text class="label" x="990" y="101">5</text>
+
+  <text x="110" y="162" font-size="17" font-weight="700" fill="#4338ca">Submitted</text>
+  <text x="330" y="162" font-size="17" font-weight="700" fill="#6d28d9">Assigned</text>
+  <text x="550" y="162" font-size="17" font-weight="700" fill="#0369a1">In progress</text>
+  <text x="770" y="162" font-size="17" font-weight="700" fill="#0f766e">Resolved</text>
+  <text x="990" y="162" font-size="17" font-weight="700" fill="#15803d">Closed</text>
+
+  <text class="who" x="110" y="184">Student</text>
+  <text class="who" x="330" y="184">Warden</text>
+  <text class="who" x="550" y="184">Technician</text>
+  <text class="who" x="770" y="184">Technician</text>
+  <text class="who" x="990" y="184">Student / Warden</text>
+
+  <!-- travelling token -->
+  <circle r="9" fill="#fbbf24" filter="url(#glow)">
+    <animateMotion dur="8s" repeatCount="indefinite" keyPoints="0;1;1;0" keyTimes="0;0.6;0.9;1" calcMode="linear" path="M110 95 L990 95"/>
+  </circle>
+</svg>
