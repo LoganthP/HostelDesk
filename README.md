@@ -20,7 +20,7 @@
 [![MongoDB Atlas](https://img.shields.io/badge/MongoDB_Atlas-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/atlas)
 [![Mongoose](https://img.shields.io/badge/Mongoose_8-880000?style=for-the-badge&logo=mongoose&logoColor=white)](https://mongoosejs.com/)
 
-[Features](#-features) · [Tech Stack](#-tech-stack) · [Architecture](#-architecture) · [Quick Start](#-quick-start) · [Demo Guide](#-suggested-demo) · [API](#-api-reference) · [Troubleshooting](#-troubleshooting)
+[Features](#-features) · [Tech Stack](#-tech-stack) · [Architecture](#-architecture) · [Quick Start](#-quick-start) · [API](#-api-reference) · [Troubleshooting](#-troubleshooting)
 
 </div>
 
@@ -306,38 +306,6 @@ Open **http://localhost:5173** 🎉
 | 🎓 Student without a room | `rahul@student.edu` |
 
 The login page has **one-click demo buttons** for Student, Warden, Plumber, Electrician, IT support and Carpenter. The plumber starts with an active job (*Shower drain is clogged*) waiting to be started, and the pest-control complaint shows what happens when no specialist exists.
-
-<img src="assets/divider.svg" width="100%" alt=""/>
-
-## 🎬 Suggested Demo
-
-**One Wi-Fi repair across all three roles.** Use two browser windows (one normal, one private) so you can switch roles quickly.
-
-| Step | Role | Action |
-|:---:|---|---|
-| 1 | 🎓 **Student** (`priya@student.edu` or a newly registered student) | *Report an issue* → **Wi-Fi** → fill the network name → *Submit complaint*. It appears under *Awaiting assignment*. |
-| 2 | 🧑‍💼 **Warden** | *Complaints* → *Needs assignment* → open it. **Farhan Ali (IT support / Wi-Fi)** is preselected because his specialty matches. Set priority → *Assign technician*. |
-| 3 | 🔧 **IT support** (`it@hostel.edu`) | *Up next* → *Start work* → add a progress note → write a repair note → *Mark as resolved*. |
-| 4 | 🎓 **Student** | The overview shows *Check these repairs* → open it → *Confirm repair* (or *Reopen* with a reason, which sends it back to the warden's *Needs assignment*). |
-| 5 | 🕓 **Anyone** | Open the complaint's **History** to see who changed each status, in which role, and when. |
-
-<details>
-<summary><b>🛏️ Bonus: show room allocation</b></summary>
-
-<br/>
-
-**Warden** → *Rooms & beds* → click a free bed → allocate *Rahul Verma* → *Students* → *Transfer* him. The old bed becomes free, his earlier complaints keep the old room, and *History* shows both allocations.
-
-</details>
-
-<details>
-<summary><b>🧩 Bonus: a category with no specialist</b></summary>
-
-<br/>
-
-If a category has no specialist (for example the seeded pest-control complaint), the complaint page says which specialty is missing, nothing is preselected, and the complaint stays in *Needs assignment* until the warden chooses someone or adds a specialist under *Staff*.
-
-</details>
 
 <img src="assets/divider.svg" width="100%" alt=""/>
 
